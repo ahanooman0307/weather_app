@@ -4,6 +4,7 @@ import './App.css';
 import { getLocationData } from './utils/WeatherAppAPI';
 import MainScreen from './components/mainscreen';
 import FormInput from './components/FormInput';
+import getTemperature from './utils/GetTemperature';
 
 
 function App() {
@@ -17,8 +18,10 @@ function App() {
     const data = new FormData(e.target)
     const object = (Object.fromEntries(data.entries()))
     setLocation(object.location)
+    getTemperature(object.location)
 
-    console.log('main', object.location)
+    console.log('location', object.location)
+    // console.log('temperature', temperature)
     
   }
 //  useEffect(() => {

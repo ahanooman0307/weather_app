@@ -5,17 +5,9 @@ import '../styles/main.css'
 const MainScreen = ({location}) => {
     
 
-    const getTemperature = async () =>  {
-       getLocationData(location)
-       .then(data => {
-       let current = data.current.temp_c;
-       console.log(current)
-       
-      })
-       
-    }
+    
 
-    getTemperature()
+    // getTemperature()
 
 
     
